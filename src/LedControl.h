@@ -27,10 +27,10 @@
 #ifndef LedControl_h
 #define LedControl_h
 
-#if defined(__AVR__)
-#include <avr/pgmspace.h>
-#elif defined(ESP8266)
-#include <pgmspace.h>
+#if defined ( ESP8266 )
+  #include <pgmspace.h>
+#else
+  #include <avr/pgmspace.h>
 #endif
 
 #if (ARDUINO >= 100)
